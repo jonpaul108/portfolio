@@ -1,48 +1,24 @@
-const skills = [
-  { skillName: "JavaScript", skillLevel: 90 },
-  { skillName: "HTML", skillLevel: 85 },
-  { skillName: "CSS", skillLevel: 80 },
-  { skillName: "React", skillLevel: 60 },
-  { skillName: "SvelteKit", skillLevel: 70 },
-  //... add as many skills as you need
-];
+// const skills = [
+//   { skillName: "JavaScript", skillLevel: 90 },
+//   { skillName: "HTML", skillLevel: 85 },
+//   { skillName: "CSS", skillLevel: 80 },
+//   { skillName: "React", skillLevel: 60 },
+//   { skillName: "SvelteKit", skillLevel: 70 },
+//   //... add as many skills as you need
+// ];
+
+const portfolio = document.querySelector("#portfolio");
+const arrow = document.querySelector("#arrow-next-section");
+const sectionsList = document.querySelectorAll("section");
+const sectionIds = Array.from(sectionsList).map(el => el.id);
+let sectionNum = 0;
+var arrowRotated = false;
 
 const form = document.querySelector("#form");
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Ensure the document is fully loaded
-  const skillContainer = document.querySelector(".skill"); // Target the container where you want to append skill bars
+// document.addEventListener("DOMContentLoaded", () => {
 
-  skills.forEach((skill) => {
-    // Create necessary elements
-    const skillItem = document.createElement("li");
-    const skillBar = document.createElement("div");
-    const skillLevel = document.createElement("div");
-    const skillNameParagraph = document.createElement("p");
-
-    // Set the attributes and styles
-    skillBar.className = "skill-bar";
-    skillLevel.className = "skill-level";
-    skillLevel.style.width = `${skill.skillLevel}%`;
-    skillNameParagraph.textContent = skill.skillName;
-
-    // Append to the DOM
-    skillItem.appendChild(skillNameParagraph);
-    skillBar.appendChild(skillLevel);
-    skillItem.appendChild(skillBar);
-    skillContainer.appendChild(skillItem);
-  });
-});
- 
-document.querySelector(".toggle-icon").addEventListener("click", function () {
-  var skillList = document.querySelector(".skills ul");
-  if (skillList.classList.contains("visible")) {
-    skillList.classList.remove("visible");
-  } else {
-    skillList.classList.add("visible");
-  }
-});
-
+// });
 
 document.querySelector("#form").addEventListener("submit", async function (e) {
   e.preventDefault();
@@ -63,9 +39,42 @@ document.querySelector("#form").addEventListener("submit", async function (e) {
 });
 
 function resetForm() {
-//  document.querySelector("#name").value = "";
-//  document.querySelector("#email").value = "";
-// document.querySelector("#message").value = "";
-  //   document.querySelector("#accessKey").value = "";
   form.reset();
+}
+
+arrow.addEventListener("click", () => {
+  sectionNum = cycleSections();
+  const nextSection = sectionsList[sectionNum];
+  console.log(nextSection);
+  nextSection.scrollIntoView({ behavior: 'smooth' });
+  if (sectionNum === 0 && arrowRotated) {
+    flipArrowDown()
+  } 
+  if (sectionNum === (sectionsList.length - 1) && !arrowRotated) {
+    flipArrowUp();
+  }
+
+})
+
+function cycleSections() {
+  const num = sectionNum + 1;
+  const maxLen = sectionsList.length - 1;
+  if (num > maxLen) {
+    return 0;
+  } 
+  return num;
+}
+
+function flipArrowDown() {
+  arrow.style.transform = "rotate(0deg)";
+  toggleRotation();
+}
+
+function flipArrowUp() {
+  arrow.style.transform = "rotate(-180deg)";
+  toggleRotation();
+}
+
+function toggleRotation() {
+  arrowRotated = !arrowRotated
 }
