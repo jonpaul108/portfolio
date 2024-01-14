@@ -393,8 +393,12 @@ color: var(--color-white);
 /* potfolio page template css */
 .main-portfolio {
     width: 90%;
+    line-height: 1.5;
 }
 
+.main-portfolio p {
+font-size: 1.2em;
+}
 .hero {
     margin-top: 8em;
     padding: 0;
