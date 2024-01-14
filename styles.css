@@ -396,9 +396,16 @@ color: var(--color-white);
 }
 
 .hero {
-    margin: 2em 0;
-    font-size: 3em;
+    margin-top: 8em;
     padding: 0;
+}
+
+.hero h1 {
+    font-size: 3em;
+}
+
+.hero p {
+    font-size:  2em;
 }
 
 .hero img {
@@ -421,6 +428,9 @@ color: var(--color-white);
 
 .content-text {
     max-width: 60em;
+    background-color: var(--color-black1);
+    margin-bottom: 20em;
+    padding: 10px;
 }
 
 .image-container {
@@ -431,7 +441,7 @@ color: var(--color-white);
 }
 
 .image-container img {
-    width: 80%;
+    width: 70%;
     display: block;
     margin: 0 auto;
 }
@@ -439,7 +449,7 @@ color: var(--color-white);
 .image-description {
    padding: 10px 0;
     background-color: var(--color-black1);
-    width: 80%;
+    width: 70%;
 }
 
 .image-description p {
@@ -456,4 +466,12 @@ color: var(--color-white);
 
 .conclusion-header {
     font-size: 2em;
+}
+
+.content-conclusion {
+    max-width: 60em;
+    background-color: var(--color-black1);
+    margin-top: 10em;
+    margin-bottom: 5em;
+    padding: 10px;
 }
