@@ -1,11 +1,3 @@
-// const skills = [
-//   { skillName: "JavaScript", skillLevel: 90 },
-//   { skillName: "HTML", skillLevel: 85 },
-//   { skillName: "CSS", skillLevel: 80 },
-//   { skillName: "React", skillLevel: 60 },
-//   { skillName: "SvelteKit", skillLevel: 70 },
-//   //... add as many skills as you need
-// ];
 
 const portfolio = document.querySelector("#portfolio");
 const arrow = document.querySelector("#arrow-next-section");
@@ -15,10 +7,6 @@ let sectionNum = 0;
 var arrowRotated = false;
 
 const form = document.querySelector("#form");
-
-// document.addEventListener("DOMContentLoaded", () => {
-
-// });
 
 document.querySelector("#form").addEventListener("submit", async function (e) {
   e.preventDefault();
@@ -71,10 +59,11 @@ function flipArrowDown() {
 }
 
 function flipArrowUp() {
-  arrow.style.transform = "rotate(-180deg)";
+  arrow.style.transform = "rotate(180deg)";
   toggleRotation();
 }
 
 function toggleRotation() {
   arrowRotated = !arrowRotated
 }
+

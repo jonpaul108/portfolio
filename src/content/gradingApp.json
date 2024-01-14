@@ -1,0 +1,22 @@
+{
+  "intro": {
+    "title": "",
+    "description":"",
+    "image":"",
+    "image-desc":""
+  },
+  "body": [
+    {
+      "header": "",
+      "description": "",
+      "image": "",
+      "image-desc": ""
+    }
+  ],
+  "conclusion": {
+    "header": "",
+    "description": "",
+    "image": "",
+    "image-desc": ""
+  }
+}
