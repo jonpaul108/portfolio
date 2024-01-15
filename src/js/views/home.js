@@ -1,31 +1,56 @@
-export const utils = function () {
+const portfolioProjects = [
+  {
+    img: "../../assets/jira_scrum_project.png",
+    title: "Jira Scrum Project",
+    alt: "Jira Scrum Project",
+  },
+  {
+    img: "",
+    title: "Jira Scrum Project",
+    alt: "Jira Scrum Project",
+  },
+  {
+    img: "",
+    title: "Jira Scrum Project",
+    alt: "Jira Scrum Project",
+  },
+  {
+    img: "",
+    title: "Jira Scrum Project",
+    alt: "Jira Scrum Project",
+  },
+];
 
+export const utils = function () {
   const portfolio = document.querySelector("#portfolio");
   const arrow = document.querySelector("#arrow-next-section");
   const sectionsList = document.querySelectorAll("section");
   const form = document.querySelector("#form");
+
   const sectionIds = Array.from(sectionsList).map((el) => el.id);
   let sectionNum = 0;
   var arrowRotated = false;
 
   //handle submit
-  document.querySelector("#form").addEventListener("submit", async function (e) {
-    e.preventDefault();
-    const name = document.querySelector("#name").value;
-    const email = document.querySelector("#email").value;
-    const message = document.querySelector("#message").value;
-    const accessKey = document.querySelector("#accessKey").value;
-    const payload = { name, email, message, accessKey };
-    const response = await fetch("https://api.staticforms.xyz/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
+  document
+    .querySelector("#form")
+    .addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const name = document.querySelector("#name").value;
+      const email = document.querySelector("#email").value;
+      const message = document.querySelector("#message").value;
+      const accessKey = document.querySelector("#accessKey").value;
+      const payload = { name, email, message, accessKey };
+      const response = await fetch("https://api.staticforms.xyz/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+      resetForm();
+      alert("Thank you! Your message was submitted.");
     });
-    resetForm();
-    alert("Thank you! Your message was submitted.");
-  });
 
   function resetForm() {
     form.reset();
@@ -67,37 +92,23 @@ export const utils = function () {
   function toggleRotation() {
     arrowRotated = !arrowRotated;
   }
-}
 
-const portfolioProjects = [
-  {
-    img: "../../assets/jira_scrum_project.png",
-    title: "Jira Scrum Project",
-    alt: "Jira Scrum Project",
-  },
-  {
-    img: "",
-    title: "Jira Scrum Project",
-    alt: "Jira Scrum Project",
-  },
-  {
-    img: "",
-    title: "Jira Scrum Project",
-    alt: "Jira Scrum Project",
-  },
-  {
-    img: "",
-    title: "Jira Scrum Project",
-    alt: "Jira Scrum Project",
-  },
-];
+  function updateHistory(e) {
+    const link = e.dataset.linkname;
+    console.log("updater:", e.dataset.linkname);
+    history.pushState("", "", link);
+    router();
+  }
+
+  
+};
 
 const portfolioItems = generatePortfolioHTML();
 
 function createPortfolioItem(obj) {
   const { img, alt, title } = obj;
   const item = `
-   <div class="portfolio-item">
+   <div class="portfolio-item" data-link data-linkname="portfolio/gradingApp">
       <div class="portfolio-img-container">
           <img src=${img} alt=${alt}>
       </div>
@@ -117,7 +128,6 @@ function generatePortfolioHTML() {
   });
   return portfolioItems;
 }
-
 
 export const htmlString = () => `
 <section class="circles-container" id="hero-message"></section>

@@ -1,12 +1,14 @@
 import { htmlString, utils} from "./views/home.js";
-import GradingApp from "./views/portfolio/gradingApp.js";
+import GradingApp from "./views/gradingApp.js";
+
+
 
 
 
 export const routes = {
   "/": { title: "Home", render: htmlString, func: utils },
   "/home": { title: "Home", htmlString, func: utils },
-  "/portfolio/gradingapp": { title: "Grading App", render: GradingApp },
+  "/portfolio/gradingApp": { title: "Grading App", render: GradingApp },
 };
 
 function showPortfolioItems(itemInfo) {
@@ -15,6 +17,7 @@ function showPortfolioItems(itemInfo) {
 
 function router() {
   let view = routes[location.pathname];
+  console.log(view, location.pathname);
 
   if (view) {
     document.title = view.title;
@@ -28,9 +31,10 @@ function router() {
 
 // Handle navigation
 window.addEventListener("click", (e) => {
+
   if (e.target.matches("[data-link]")) {
     e.preventDefault();
-    history.pushState("", "", e.target.href);
+    history.pushState("", "", e.target.href || e.target.dataset.linkname);
     router();
   }
 });
@@ -38,3 +42,6 @@ window.addEventListener("click", (e) => {
 // Update router
 window.addEventListener("popstate", router);
 window.addEventListener("DOMContentLoaded", router);
+
+
+
