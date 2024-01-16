@@ -1,3 +1,10 @@
 import { portfolioHTMLTemplate } from "./portfolioTemplate.js";
+import Content from "../../content/gradingApp.js";
 
-export default portfolioHTMLTemplate;
+function combineContentWithTemplate() {
+  console.log(Content);
+  const generated = portfolioHTMLTemplate(Content);
+  return generated;
+}
+
+export default combineContentWithTemplate;
