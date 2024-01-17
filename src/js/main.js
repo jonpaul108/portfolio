@@ -1,14 +1,16 @@
 import { htmlString, utils} from "./views/home.js";
 import GradingApp from "./views/gradingApp.js";
+import MCSPApp from "./views/mcspAdmissions.js";
 
 
 
 
 
 export const routes = {
-  "/": { title: "Home", render: htmlString, func: utils },
-  "/home": { title: "Home", htmlString, func: utils },
+  "/": { title: "Home", render: htmlString, utils: utils },
+  "/home": { title: "Home", htmlString, utils: utils },
   "/portfolio/gradingApp": { title: "Grading App", render: GradingApp },
+  "portfolio/mcspAdmissions": { title: "Grading App", render: GradingApp },
 };
 
 function showPortfolioItems(itemInfo) {
@@ -17,7 +19,6 @@ function showPortfolioItems(itemInfo) {
 
 function router() {
   let view = routes[location.pathname];
-  console.log(view, location.pathname);
 
   if (view) {
     document.title = view.title;

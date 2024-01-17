@@ -490,3 +490,8 @@ max-width: 40em;
 .section-portfolio:not(:last-of-type) {
     margin-bottom: 20em;
 }
+
+small {
+    color: #537D8D;
+    font-style: italic
+}

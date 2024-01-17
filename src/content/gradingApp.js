@@ -7,33 +7,30 @@ const content = {
   },
   body: [
     {
-      description: `The company wished to decrease the number of students failing due to technical weaknesses, and the number of students who required remediation. I collected relevant data regarding student issues over the previous 3 years and cleaned it before proceeding to analysis. <br/><br/> After I analyzed the funnel data and compared the current admissions test with curriculum expectations, it became <span class="white-highlight">clear there was a gap between assessment goals and course goals</span> and that staff lacked a clear framework from which to make entrance decisions.`,
+      description: `I collected relevant data regarding student issues over the previous 3 years (from the start of the current admission assessment) and cleaned it before proceeding to analysis. <br/><br/> After <span class="white-highlight">I analyzed the funnel data and compared the current admissions test with curriculum expectations</span>, it became clear assessment and course goals did not match and that staff lacked a clear framework from which to make entrance decisions.`,
+      image: "../../assets/WithdrawnVsDismissedGraph.png",
+      imageDesc: `My analysis of data demonstrated disconnects between admissions and course expectations.<br/><small>Data not representative of actual figures.</small>`,
+    },
+    {
+      description: `<span class="white-highlight">I recommended three courses of action</span> to confront weaknesses in the admission processes: One, create admission standards and a rubric to guide assessment creation and grading. Two, build a UI to facilitate grading by the rubric. And three, use a grading algorithm to increase accuracy.`,
       image: "../../assets/gradingAppProcess.png",
-      imageDesc: `My analysis of data showed weaknesses in the student selection process.`,
+      imageDesc: `The original process versus revamped process.</span> As product owner, I promoted the creation of admission standards, a grading UI, and grading by algorithm to increase the accuracy of selecting for high quality candidates. <br/><small>Diagram edited to redact proprietary info.</small>`,
     },
     {
-      description: `<span class="white-highlight">I recommended three courses of action to confront weaknesses in the admission processes leading to stated problem areas. </span> One, create admission standards and a rubric to guide assessment creation and grading. Two, build a UI to facilitate grading by the rubric. And three, use a grading algorithm to increase accuracy.`,
-      image: "../../assets/gradingAppProcess.png",
-      imageDesc: `<span class="white-highlight">The original process versus revamped process.</span> As product owner, I promoted the creation of admission standards, a grading UI, and grading by algorithm to increase the accuracy of selecting for high quality candidates. *Diagram edited to redact proprietary info.`,
-    },
-    {
-      description:
-        "Not everyone was sold on the idea. Engineers who built the note taking UI and assessment staff pushed for continuing the original processes. The main complaint was time. Some staff believed rubric based grading would be less efficient than the current process. <br/><br/>To obtain buy-in I demonstrated a prototype I created of the grading app. After answering the staff fears and demonstrating the value of the concept, we moved forward with the engineering and process change.",
+      description: `Not everyone was sold on the idea. Engineers who built the note taking UI and assessment staff pushed for continuing the original processes. The main complaint was time. Some staff believed rubric based grading would be less efficient than the current process. <br/><br/>To obtain buy-in <span class="white-highlight">I demonstrated a prototype I created of the grading app.</span> After answering the staff fears and demonstrating the value of the concept, we moved forward with the engineering and process change.`,
       image: "../../assets/gradingInterface.png",
-      imageDesc: `<span class="white-highlight">My prototype for testing and to demonstrate the new grading UI in action leading to team buy-in.</span> *Skills changed due to proprietary information.`,
+      imageDesc: `My functional prototype to demonstrate the new grading UI concept in action.<br/><small>Skills changed due to proprietary information.</small>`,
     },
     {
-      description:
-        `After implementation and training, I monitored the success of the project over 6-months to ensure efficacy. During this time, I implemented weekly evaluation procedures to reinforce staff skills and grading processes. <br/><br/>
-        After 6-months and evaluation of the results were clear. We surpassed expectations to increase admissions efficacy and significantly increased grading throughput. `,
-      image: "../../assets/gradingInterface.png",
-      imageDesc: `<span class="white-highlight">My prototype for testing and to demonstrate the new grading UI in action leading to team buy-in.</span> *Skills changed due to proprietary information.`,
+      description: `After implementation and training, <span class="white-highlight">I monitored the success of the project over 6-months to ensure efficacy.</span> During this time, <span class="white-highlight">I implemented weekly evaluation procedures to reinforce staff skills and grading processes.</span> <br/><br/>
+        After 6-months and evaluation of the results were clear. We surpassed expectations to increase admissions efficacy - increasing graduation rate by 20% - and significantly increased grading throughput. `,
+      image: "../../assets/celebrateGradeProjectClose.png",
+      imageDesc: `Success! Graduation rate increased by 20% and grading efficiency rose by 40%.`,
     },
   ],
   conclusion: {
     header: "Summary",
-    description:
-      `This project challenged me as a product owner. I needed strong negotiation skills to gain access to data from the full funnel, was pushed to excel in analytics through shifting thousands of records and student feedback to understand the story of our customers (i.e. students), and exercised leadership to obtain buy-in from a team resistant to change.<br/><br/> In the end, we soared above expectations and helped create a flourishing learning environment that changed the lives of our students.`,
+    description: `This project challenged me as a product owner. <span class="white-highlight">I needed strong negotiation skills to gain access to data from the full funnel, was pushed to excel in analytics through shifting thousands of records, and exercised leadership to obtain buy-in from a team resistant to change.</span><br/><br/> In the end, we soared above expectations and helped create a flourishing learning environment that changed the lives of our students.`,
     imageDesc: "",
   },
 };
