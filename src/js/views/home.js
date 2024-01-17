@@ -3,6 +3,7 @@ const portfolioProjects = [
     img: "../../assets/jira_scrum_project.png",
     title: "Jira Scrum Project",
     alt: "Jira Scrum Project",
+    link: "portfolio/gradingApp",
   },
   {
     img: "",
@@ -106,9 +107,9 @@ export const utils = function () {
 const portfolioItems = generatePortfolioHTML();
 
 function createPortfolioItem(obj) {
-  const { img, alt, title } = obj;
+  const { img, alt, title, link } = obj;
   const item = `
-   <div class="portfolio-item" data-link data-linkname="portfolio/gradingApp">
+   <div class="portfolio-item" data-link data-linkname=${link}>
       <div class="portfolio-img-container">
           <img src=${img} alt=${alt}>
       </div>

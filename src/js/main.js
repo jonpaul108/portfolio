@@ -1,16 +1,17 @@
 import { htmlString, utils} from "./views/home.js";
 import GradingApp from "./views/gradingApp.js";
 import MCSPApp from "./views/mcspAdmissions.js";
-
-
-
+import CurriculumDesign from "./views/curriculumDesign.js";
+import LaserCoaching from "./views/lasserCoaching.js";
 
 
 export const routes = {
   "/": { title: "Home", render: htmlString, utils: utils },
   "/home": { title: "Home", htmlString, utils: utils },
+  "portfolio/mcspAdmissions": { title: "MCSP Admissions", render: MCSPApp },
+  "portfolio/curriculumDesign": { title: "Curriculum Design", render: CurriculumDesign },
+  "portfolio/laserCoaching": { title: "Laser Coaching", render: LaserCoaching },
   "/portfolio/gradingApp": { title: "Grading App", render: GradingApp },
-  "portfolio/mcspAdmissions": { title: "Grading App", render: GradingApp },
 };
 
 function showPortfolioItems(itemInfo) {
