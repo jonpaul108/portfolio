@@ -1,24 +1,27 @@
 const portfolioProjects = [
   {
     img: "../../assets/jira_scrum_project.png",
-    title: "Jira Scrum Project",
-    alt: "Jira Scrum Project",
+    title: "Admissions Application Project",
+    alt: "Grading Application Project",
     link: "portfolio/gradingApp",
   },
   {
-    img: "",
-    title: "Jira Scrum Project",
-    alt: "Jira Scrum Project",
+    img: "../../assets/intermediatePrepCurriculumDesign.png",
+    title: "Curriculum Design Project",
+    alt: "Curriculum Design",
+    link: "portfolio/curriculumDesign",
   },
   {
     img: "",
-    title: "Jira Scrum Project",
+    title: "Military Career Admissions Automation",
     alt: "Jira Scrum Project",
+    link: "portfolio/mcspAdmissions",
   },
   {
     img: "",
-    title: "Jira Scrum Project",
-    alt: "Jira Scrum Project",
+    title: "Laser Coaching Project",
+    alt: "Laser Coaching Project",
+    link: "portfolio/laserCoaching",
   },
 ];
 
@@ -100,8 +103,6 @@ export const utils = function () {
     history.pushState("", "", link);
     router();
   }
-
-  
 };
 
 const portfolioItems = generatePortfolioHTML();
@@ -153,11 +154,6 @@ export const htmlString = () => `
    ${portfolioItems}
   <!-- Repeat the above block for each portfolio item -->
 </section>
-<!-- <section class="portfolio-section" id="portfolio">
-  <h2 class="portfolio-heading">Portfolio</h2>
-  <h2>Under Constructon</h2>
-    <img src="SVG/Product-Page-under-construction-01.svg" alt="Portfolio Under Construction">
-</section> -->
 
 <!-- Contact Form Section -->
 <section class="contact-form-section" id="contact">
