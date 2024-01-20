@@ -1,25 +1,25 @@
 const portfolioProjects = [
   {
-    img: "../../assets/jira_scrum_project.png",
-    title: "Admissions Application Project",
+    img: "../../assets/gradingTAAProcessView.png",
+    title: "Admissions Selection Optimization",
     alt: "Grading Application Project",
     link: "portfolio/gradingApp",
   },
   {
     img: "../../assets/intermediatePrepCurriculumDesign.png",
-    title: "Curriculum Design Project",
+    title: "Intermediate Prep Coding Curriculum",
     alt: "Curriculum Design",
     link: "portfolio/curriculumDesign",
   },
   {
-    img: "",
+    img: "../../assets/demoTAAMCSP.png",
     title: "Military Career Admissions Automation",
     alt: "Jira Scrum Project",
     link: "portfolio/mcspAdmissions",
   },
   {
-    img: "",
-    title: "Laser Coaching Project",
+    img: "../../assets/laserCoachingPairCoding.png",
+    title: "Laser Coaching Product",
     alt: "Laser Coaching Project",
     link: "portfolio/laserCoaching",
   },

@@ -3,7 +3,7 @@ const content = {
     title: "Admissions Selection Optimization",
     description:
       "At Hack Reactor, I worked to improve the selection of qualified coding candidates. Starting from analysis and comparison of student entrance and outcomes data, I identified, prototyped, and tested the highest impact feature changes to their admissions testing app.",
-    image: "../../assets/admissionsProject.png",
+    image: "../../assets/gradingTAAProcessView.png",
   },
   body: [
     {
